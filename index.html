@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encripta Palabras</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="caja ingreso">
+            <img onclick="reiniciar()" class="ingreso__logo" src="./imagenes/Logo.png" alt="logo">
+            <div class="ingreso__form">
+                <form action="">
+                    <textarea name="mensaje" id="textoNuevo" placeholder="Ingrese el texto aqui"></textarea>
+                </form>
+                <p><i class='bx bxs-error-circle'></i> Solo letras minusculas y sin acentos</p>
+                <div class="botones">
+                    <button onclick="botonEncriptar()" class="boton encriptar">Encriptar!</button>
+                    <button onclick="botonDesencriptar()" class="boton desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="caja salida">
+            <div id="info" class="salida__info">
+                <img src="./imagenes/Muñeco.png" alt="muñeco">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <div id="respuesta" class="salida__respuesta">
+                <p id="textoEncriptado" class="respuesta"></p>
+                <button onclick="copiarTexto()" class="boton copiar">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <p>© Created by Angelo V</p>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
